@@ -70,14 +70,6 @@
   height: 100%;
 }
 
-iframe {
-  border: 5px solid red;
-  margin: 0;
-  padding: 0;
-  opacity: 0.8;
-  display:block; /* Add this */
-}
-
 @media screen and (max-width: 600px) {
   html{
     scroll-padding-top: 90px;
