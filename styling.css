@@ -50,11 +50,33 @@
   
 #main-doc header{
   font-weight: bold;
+  color: #0d1321;
+  font-size: 1.2em;
   padding-top: 4%;
 }
 
-#handwashing_poster{
-  width: 90%;
+.ul_calls li{
+  color: #0d1321;
+}
+
+.ol_objective li::marker {
+  color: #3dccc7;
+  font-weight: bold;
+  font-size:1.2em;
+}
+
+.ol_objective li:hover {
+  color: #3dccc7;
+}
+
+.objective{
+  display:block;
+  border-left: 4px solid #3dccc7;
+  padding-left: 7px;
+}
+
+p{
+  font-size: 1em;
 }
 
 .responsive{
@@ -70,6 +92,56 @@
   height: 100%;
 }
 
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  list-style-type: none;
+}
+
+.brands__item {
+  background: white;
+}
+
+.brands__item img {
+  display: block;
+  max-width: 100%;
+  width: 130px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.brands__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#EC{
+  width: 170px;
+}
+
+#footer_text{
+  color: grey;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* table styling */
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+.num{
+  color: #3dccc7;
+  font-size: 1.1em;
+  font-style: bold;
+}
+
+/* responsiveness */
 @media screen and (max-width: 600px) {
   html{
     scroll-padding-top: 90px;
@@ -98,4 +170,32 @@
     margin:0 auto;
   }
 
+}
+
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color:#0d1321; 
+  color: white;
+  position: fixed;
+  margin-left: 20%;
+  margin-top: 20%;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }

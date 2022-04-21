@@ -15,10 +15,14 @@
             <a class="nav-link" href="#Projects">About the projects</a>
             <a class="nav-link" href="#Actors">Profile of the actors</a>
             <a class="nav-link" href="#Distance">The role of geo distance</a>
-            <a class="nav-link" href="#Contact">Contact</a>
+            <a class="nav-link" href="#Contact">About the project</a>
         </nav>
         
         <main id="main-doc">
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                Please allow 30-60 seconds for all graphics to load. 
+            </div>
             <header>Introduction</header><br>
                 <p>Smart specialization is one of the most central pillars of the EU’s reformed Cohesion policy. Contrary to traditional sector-neutral (horizontal) approaches,
                     smart specialization requires regions to concentrate their investments on a limited number of context-specific research and innovation priorities. Yet, this
@@ -32,7 +36,7 @@
                     for Business Competitiveness (IVACE). In this study we look at the R&I network that emerged as a result of the collaborative open calls launched annually by the 
                     two entities. More specifically we consider the following open calls:
                     <br><br>
-                    <ul>
+                    <ul class="ul_calls">
                         <li>R&D in cooperation (IVACE)</li>
                         <li>Strategic projects in cooperation (AVI)</li>
                         <li>Consolidation of the business value chain (AVI)</li>
@@ -41,13 +45,50 @@
                     <i>Note: IVACE’s objectives are geared toward assisting regional SMEs in increasing their competitiveness and overall innovative capacity. Hence, the open calls
                         launched by IVACE target primarily private businesses. AVI, on the other hand, seeks to enhance collaboration between universities, research centers, the
                         public administration and the private sector.</i>
+                    <br>
+                    <br>
+                    A brief overview of the data used for the analysis is provided below:
+                    <br>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>Total number of open calls considered</td>
+                            <td><span class="num">3</span></td>
+                        </tr>
+                        <tr>
+                            <td>Time period</td>
+                            <td><span class="num">2016-2021</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total number of collaborative projects</td>
+                            <td><span class="num">319</span></td>
+                        </tr>
+                        <tr>
+                            <td>Share of approved projects</td>
+                            <td><span class="num">51.4%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total number of participating organizations</td>
+                            <td><span class="num">437</span></td>
+                        </tr>
+                      </table>
+                    <br>
+                    <br>
+                    <p class="objective">  The objective of this dashboard is twofold:</p>
+                    <br>
+                    <ol class="ol_objective">
+                        <li>provide actionable insight for policymakers and inform decision-making</li>
+                        <li>make data and research on the implementation of smart specialisation accessible for all stakeholders involved, including companies, research centers, 
+                            universities, public administration and the general public.</li>
+                    </ol>  
+                    
                 </p>
             <section class="main-section" id="Network">
                 <header>Network of collaborations</header><br>
-                <p>The map below shows the spatial distribution of innovative actors (private companies, research centers, universities, associations, etc.) who requested public
+                <p>The map below shows the spatial distribution of all 437 innovative actors (private companies, research centers, universities, associations, etc.) who requested public
                     funding for carrying out collaborative R&D projects at one of the three open calls outlined above. </p>
                 <br>
-                <p>The links between actors represent collaborative R&D projects, which can be filtered by year via the box on the right-hand side. Note that the map includes both
+                <p>The links between actors represent collaborative R&D projects, which can be filtered by year using the box on the right-hand side. Note that the map includes both
                     approved and rejected projects.</p>
                 <br>
                 <div class="responsive">
@@ -57,8 +98,24 @@
             </section>
             <section class="main-section" id="Distribution">
                 <header>Distribution of RIS3 funds</header><br>
-                <p>---Work in progress---</p>
+                <p>The total amount of subsidies awarded for the advancement of regional collaborative R&D projects has increased steadily since the establishment of AVI in 2018.
+                    The graphic below shows the evolution of funding between 2016 and 2021.
+                </p>
                 <br>
+                <div class="responsive">
+                    <iframe src="Projects_funds.html" frameborder="0" >Your browser does not support this graphic.</iframe>
+                </div>
+                <br>
+                <p> An aspatial map of the regional collaborative network is presented below. It allows the user to filter organizations based on the amount of total funding (subsidy) they have received 
+                    from either AVI or IVACE for the 2016-2021 period and highlights the position of these entities within the network. Note that the edges (links) of the network are weighted, meaning 
+                    that the thickness of each line is proportional to the frequency of collaboration between the connected actors. 
+                    By selecting 0 from the dropdown menu, we can see that many of the organizations which failed to obtain the requested funding are positioned outside the central network structure
+                    and lack critical links to the core. 
+                </p>
+                <br>
+                <div class="responsive">
+                    <iframe src="Aspatial_network_node_subsidy.html" frameborder="0" >Your browser does not support this graphic.</iframe>
+                </div>
             </section>
             <section class="main-section" id="Projects">
                 <header>About the projects</header><br>
@@ -73,8 +130,11 @@
             </section>
             <section class="main-section" id="Actors">
                 <header>Profile of the actors</header><br>
-                <p>---Work in progres---</p> 
+                <p>The vast majority of organizations participating in the R&D partnerships are private for-profits. The “Others” category captures non-profit organizations and cooperatives. </p> 
                 <br>
+                <div class="responsive">
+                    <iframe src="Piechart.html" frameborder="0" >Your browser does not support this graphic.</iframe>
+                </div>
             </section>
             <section class="main-section" id="Distance">
                 <header>The role of geographical distance</header><br>
@@ -91,9 +151,41 @@
                 <br>
             </section>
             <section class="main-section" id="Contact">
-                <header>Contact</header><br>
-                <p>---Work in progres---</p>
+                <header>About the project</header>
                 <br>
+                <p id="footer_text">This dashboard was created by Dima Yankova as part of a non-academic secondment with the <a href="https://innova.gva.es/es/inicio" target="blank">Department of Innovation,
+                    Universities, Science and Digital Societies</a> within the regional Valencian Government. Dima Yankova is a Marie Curie Early Stage Researcher (ESR) in the POLISS Innovative Training Network and a PhD candidate at
+                    INGENIO in the "Local Development and International Cooperation" doctoral program of the Polytechnic University of Valencia. The goal of POLISS is to contribute to the improvement of the Smart
+                    Specialisation Policy. The project receives funding from the European Union’s H2020 research and innovation programme under grant agreement No. 860887.
+                </p>
+                <br>
+                <ul class="brands">
+                    <li class="brands__item">
+                      <a href="http://www.upv.es/es" target="blank">
+                        <img src="UPV_logo_2.png" alt="UPV" />
+                      </a>
+                    </li>
+                    <li class="brands__item">
+                        <a href="https://www.ingenio.upv.es/en" target="blank">
+                          <img src="INGENIO_logo.jpg" alt="INGENIO" />
+                        </a>
+                    </li>
+                    <li class="brands__item">
+                        <a href="#">
+                          <img src="EC_logo.png" alt="EC" id="EC" />
+                        </a>
+                    </li>
+                    <li class="brands__item">
+                        <a href="https://poliss.eu/">
+                          <img src="POLISS_logo.png" alt="EC" />
+                        </a>
+                    </li>
+                    <li class="brands__item">
+                        <a href="#">
+                          <img src="MC_logo.png" alt="MC" />
+                        </a>
+                    </li>
+                </ul>
             </section>
         </main>
     </div>
